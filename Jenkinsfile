@@ -42,7 +42,6 @@ pipeline {
     }
                      stage('Run Container') {
       steps {
-   //     sh 'docker run --name=myapp -d -p 8081:8000 $registry:$BUILD_NUMBER &'
         sh 'docker run -d -p 8081:8080 --name=myApp $registry:$BUILD_NUMBER &'
       }
              }   
